@@ -1,4 +1,5 @@
-name: Deploy Astro to GitHub Pages
+
+name: Deploy Astro Site
 
 on:
   push:
@@ -8,19 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Descarga el código
       - uses: actions/checkout@v4
-
-      # 2. Instala Node.js
+      
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      # 3. Instala y construye
+          
       - run: npm install
       - run: npm run build
-
-      # 4. Despliega
+      
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
