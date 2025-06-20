@@ -1,0 +1,493 @@
+---
+---
+
+<body>
+    <div class="noise-overlay"></div>
+  <header class="header">
+    <div class="header-content">
+      <a href="#inicio" class="logo">
+        <img src="./image/logo.png">
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#clientes">Promociones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>En Soft Agencia escalamos tu casino al siguiente nivel</h1>
+      <p>Publicidad y APIs para número exigentes.</p>
+      <a 
+        href="https://api.whatsapp.com/send?phone=19892444132&text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." 
+        class="btn" 
+        target="_blank" 
+        rel="noopener"
+      >
+        Contactenos
+      </a>
+    </div>
+  </section>
+
+  <section class="services" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h2>Publicidad Meta</h2>
+        <p>Nos dedicamos a publicitar para cas1nos que requieran una gran cantidad de jugadores.</p>
+      </div>
+      <div class="card">
+        <h2>APIs</h2>
+        <p>Trabajamos con APIs Verificadas Balloons. Tenemos el ultimo estado que se puede conseguir en un API...</p>
+      </div>
+      <div class="card">
+        <h2>CRMs</h2>
+        <p>Gestionamos, automatizamos y preparamos flujos para facilitar el trabajo a tu equipo de cajeros a la hora de filtrar jugadores.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="situaciones">
+    <div class="container">
+      <div class="sub-label">📞 CUANDO LLAMARNOS?</div>
+      <h2>Si te encuentras en alguna de estas situaciones, no dudes en <span class="destacado">LLAMARNOS</span></h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Te cuesta conseguir una estabilidad de respuesta via Whatsapp</h3>
+          <p>Si tienes problemas de caidas con tu api, whatsapp u crm, en SOFT AGENCY tenemos tu solucion...</p>
+        </div>
+        <div class="card">
+          <h3>Estas estancado con la cantidad de jugadores?</h3>
+          <p>Si no logras conseguir tu meta de jugadores diarias, no dudes en escribirnos, nosotros nos encargamos por vos!.</p>
+        </div>
+        <div class="card">
+          <h3>Estas cansado de buscar publicidad</h3>
+          <p>Las limitaciones de opciones que te dan las agencias no son rentables? Nosotros te ofrecemos el mejor servicio al mejor precio!.</p>
+        </div>
+        <div class="card">
+          <h3>Tu negocio no está disponible las 24 horas</h3>
+          <p>Si no tenes publicidad activa las 24hs entonces estas perdiendo el tiempo, otra vez... No dudes en ESCRIBIRNOS.</p>
+        </div>
+        <div class="card">
+          <h3>Dependes demasiado de una agencia que no te respuesta?</h3>
+          <p>Contamos con un amplio equipo de analistas que cubren los turnos las 24hs del día, atentos y a disposicion 100% para vos!.</p>
+        </div>
+        <div class="card">
+          <h3>Baja conversion u calidad del jugador?</h3>
+          <p>Te ofrecemos una conversion que va desde el 60% hasta el 90% de convertibilidad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients" id="clientes">
+    <h2>PROMOCIONES DISPONIBLES (VALOR ARS)</h2>
+    <div class="promo-gallery">
+      <img src="./image/1.png" alt="Promoción 1" class="promo-img" />
+      <img src="./image/2.png" alt="Promoción 2" class="promo-img" />
+      <img src="./image/3.png" alt="Promoción 3" class="promo-img" />
+    </div>
+  </section>
+  
+  
+  
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Numero" required />
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Soft Agency. Todos los derechos reservados.</p>
+  </footer>
+<style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./image/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('ruido.png'); */
+  background-size: 300px;
+  opacity: 0.03; /* baja opacidad */
+  pointer-events: none; /* no interfiere con clics */
+  z-index: 1;
+  animation: ruido-move 1s infinite linear;
+}
+
+@keyframes ruido-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(5px, 5px); }
+}
+
+/* Asegura que el contenido esté encima del ruido */
+body > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 80px;
+      background-color: rgba(9, 22, 46, 0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .logo {
+      flex: 0 0 auto;
+      animation: bounceIn 1s ease;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo img {
+      height: 55px;
+      margin: 0;
+      display: block;
+    }
+
+    .nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #00f5d4;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: #fff;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        transform: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #09162e;
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1001;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .hero {
+  margin-top: 100px;
+  text-align: center;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.4); /* MÁS TRANSPARENTE */
+  border-radius: 10px;
+}
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #216efc, #83e8ff);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .services .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+        background-color: #102544;
+        padding: 30px;
+        width: 250px;
+        border-radius: 15px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 0 transparent;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .clients .logos {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .clients img {
+      filter: grayscale(1);
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    .clients img:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    .contact form {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      background-color: #1f354f;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #09162e;
+      font-size: 0.9rem;
+    }
+
+    /* Nueva seccion */
+    .situaciones {
+      background-color: #0b132b;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .situaciones .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .situaciones .sub-label {
+      display: inline-block;
+      background: linear-gradient(90deg, #216efc, #83e8ff);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .situaciones h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: white;
+      font-weight: 300;
+    }
+
+    .situaciones .destacado {
+      color: #00baff;
+      font-weight: bold;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card-grid .card {
+      background-color: #17233c;
+      border-radius: 12px;
+      padding: 30px 25px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .card-grid .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card-grid .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #4cc9f0;
+    }
+
+    .card-grid .card p {
+      font-size: 0.95rem;
+      color: #d0d0d0;
+    }
+
+    .card.highlight {
+      background: linear-gradient(135deg, #216efc, #83e8ff);
+      color: #000;
+    }
+
+    .card.highlight h3,
+    .card.highlight p {
+      color: #000;
+    }
+
+    /* Estilos para la galería de promociones */
+    .promo-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .promo-img {
+      width: 280px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .promo-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+    }
+
+    /* Animación fadeInUp */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Oculta cajas que aparecen por error visual */
+    .floating-box, .tooltip, .info-box, .alert, .toast {
+      display: none !important;
+    }
+
+</style>
