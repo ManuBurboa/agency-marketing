@@ -23,3 +23,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist # Carpeta donde Astro guarda los archivos
+          keep_files: true  # Evita que GitHub borre archivos necesarios
