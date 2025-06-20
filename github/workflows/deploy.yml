@@ -1,7 +1,9 @@
 name: Deploy Astro to GitHub Pages
+
 on:
   push:
-    branches: [main] # Se activa al hacer push a "main"
+    branches: [main]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,15 +14,15 @@ jobs:
       # 2. Instala Node.js
       - uses: actions/setup-node@v4
         with:
-          node-version: 20 # Usa la versión que necesites
+          node-version: 20
 
-      # 3. Instala dependencias y construye el proyecto
+      # 3. Instala y construye
       - run: npm install
       - run: npm run build
 
-      # 4. Despliega a GitHub Pages
+      # 4. Despliega
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Carpeta donde Astro guarda los archivos
-          keep_files: true  # Evita que GitHub borre archivos necesarios
+          publish_dir: ./dist
+          keep_files: true
